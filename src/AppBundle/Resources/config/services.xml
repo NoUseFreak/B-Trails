@@ -1,8 +1,6 @@
-<?xml version="1.0" ?>
-
-<container xmlns="http://symfony.com/schema/dic/services"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+<?xml version="1.0"?>
+<container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <!--
     <services>
@@ -13,4 +11,29 @@
         </service>
     </services>
     -->
+    <parameters>
+        <parameter key="app_bundle.trail.module.class">AppBundle\Module\TrailModule</parameter>
+        <parameter key="app_bundle.trail.module.form_extension.class">AppBundle\Form\Module\TrailFormExtension</parameter>
+        <parameter key="app_bundle.color.module.class">AppBundle\Module\ColorModule</parameter>
+        <parameter key="app_bundle.color.module.form_extension.class">AppBundle\Form\Module\ColorFormExtension</parameter>
+        <parameter key="app_bundle.shape.module.class">AppBundle\Module\ShapeModule</parameter>
+        <parameter key="app_bundle.shape.module.form_extension.class">AppBundle\Form\Module\ShapeFormExtension</parameter>
+    </parameters>
+    <services>
+        <service id="app_bundle.trail.module" class="%app_bundle.trail.module.class%">
+            <tag name="clastic.module" node_module="true" alias="trail"/>
+            <tag name="clastic.node_form" build_service="app_bundle.trail.module.form_extension"/>
+        </service>
+        <service id="app_bundle.trail.module.form_extension" class="%app_bundle.trail.module.form_extension.class%"/>
+        <service id="app_bundle.color.module" class="%app_bundle.color.module.class%">
+            <tag name="clastic.module" node_module="true" alias="color"/>
+            <tag name="clastic.node_form" build_service="app_bundle.color.module.form_extension"/>
+        </service>
+        <service id="app_bundle.color.module.form_extension" class="%app_bundle.color.module.form_extension.class%"/>
+        <service id="app_bundle.shape.module" class="%app_bundle.shape.module.class%">
+            <tag name="clastic.module" node_module="true" alias="shape"/>
+            <tag name="clastic.node_form" build_service="app_bundle.shape.module.form_extension"/>
+        </service>
+        <service id="app_bundle.shape.module.form_extension" class="%app_bundle.shape.module.form_extension.class%"/>
+    </services>
 </container>

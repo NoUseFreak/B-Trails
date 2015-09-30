@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity repository-class="AppBundle\Entity\TrailRepository" name="AppBundle\Entity\Trail">
+    <id name="id" type="integer" column="id">
+      <generator strategy="AUTO"/>
+    </id>
+    <field name="description" type="text" column="description" nullable="true"/>
+    <field name="distance" type="float" column="distance"/>
+
+    <many-to-one field="node" target-entity="Clastic\NodeBundle\Entity\Node">
+      <cascade><cascade-all/></cascade>
+      <join-column name="node_id" referenced-column-name="id" />
+    </many-to-one>
+
+    <many-to-one field="color" target-entity="AppBundle\Entity\Color">
+      <cascade><cascade-all/></cascade>
+      <join-column name="color_id" referenced-column-name="id" />
+    </many-to-one>
+
+    <many-to-one field="shape" target-entity="AppBundle\Entity\Shape">
+      <cascade><cascade-all/></cascade>
+      <join-column name="shape_id" referenced-column-name="id" />
+    </many-to-one>
+  </entity>
+</doctrine-mapping>
