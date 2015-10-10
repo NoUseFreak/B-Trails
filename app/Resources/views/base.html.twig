@@ -1,13 +1,66 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
-</html>
+{% extends '::clean.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+{% endblock %}
+
+{% block body %}
+    <div class="app-navbar">
+        <div class="container">
+            <nav class="navbar">
+                <a class="navbar-brand" href="{{ path('homepage') }}">B-Trails</a>
+                <ul class="nav navbar-nav pull-right">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="app-header">
+        <div class="container">
+            <header class="navbar">
+                <form class="form-inline search-box">
+                    <div class="form-group">
+                        <label for="search-input" class="sr-only">Password</label>
+                        <input type="text" class="form-control search" id="search-input" placeholder="Search...">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </form>
+            </header>
+        </div>
+    </div>
+
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    <ul class="list-unstyled">
+                        <li><h6>Product</h6></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <ul class="list-unstyled">
+                        <li><h6>Support</h6></li>
+                        <li><a href="#">Banaan</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                </div>
+                <div class="col-md-6">
+                    <ul class="list-unstyled">
+                        <li><h6>About</h6></li>
+                        <li><p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam leo nisl, lobortis id ultrices eu, luctus ac arcu. Fusce ullamcorper mauris tortor, nec scelerisque ex consectetur id.</p></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+{% endblock %}
