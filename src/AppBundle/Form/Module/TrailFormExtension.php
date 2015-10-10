@@ -27,5 +27,10 @@ class TrailFormExtension extends AbstractNodeTypeExtension
                 'label' => 'Shape',
                 'required' => false,
             ));
+
+        $this->getTabHelper($builder)->createTab('trail_location', 'Location', array(
+            'position' => array('after' => 'general')
+        ))
+            ->add('location', 'location');
     }
 }

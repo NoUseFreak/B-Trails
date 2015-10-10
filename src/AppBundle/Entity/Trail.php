@@ -38,6 +38,10 @@ class Trail implements NodeReferenceInterface
      */
     private $shape;
 
+    /**
+     * @var Location
+     */
+    private $location;
 
     /**
      * Get id
@@ -139,5 +143,28 @@ class Trail implements NodeReferenceInterface
     public function getShape()
     {
         return $this->shape;
+    }
+
+    /**
+     * Set location
+     *
+     * @param Location $location
+     * @return Trail
+     */
+    public function setLocation(Location $location)
+    {
+        $this->location = $location;
+
+        return $this;
+    }
+
+    /**
+     * Get location
+     *
+     * @return Location
+     */
+    public function getLocation()
+    {
+        return $this->location;
     }
 }

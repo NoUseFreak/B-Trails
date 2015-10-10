@@ -13,13 +13,15 @@
     </many-to-one>
 
     <many-to-one field="color" target-entity="AppBundle\Entity\Color">
-      <cascade><cascade-all/></cascade>
       <join-column name="color_id" referenced-column-name="id" />
     </many-to-one>
 
     <many-to-one field="shape" target-entity="AppBundle\Entity\Shape">
-      <cascade><cascade-all/></cascade>
       <join-column name="shape_id" referenced-column-name="id" />
+    </many-to-one>
+
+    <many-to-one field="location" target-entity="AppBundle\Entity\Location">
+      <join-column name="location" referenced-column-name="id" />
     </many-to-one>
   </entity>
 </doctrine-mapping>
