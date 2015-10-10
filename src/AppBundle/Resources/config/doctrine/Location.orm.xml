@@ -9,7 +9,7 @@
     <field name="box" type="string" column="box" length="10" nullable="true"/>
     <field name="postal" type="string" column="postal" length="10" nullable="true"/>
     <field name="city" type="string" column="city" length="255"/>
-    <field name="region" type="string" column="region" length="255"/>
+    <field name="region" type="string" column="region" length="255" nullable="true"/>
     <field name="country" type="string" column="country" length="255" nullable="true"/>
   </entity>
 </doctrine-mapping>

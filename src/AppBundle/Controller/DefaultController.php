@@ -12,6 +12,9 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-        return $this->render(':Default:index.html.twig');
+        $em = $this->getDoctrine()->getEntityManager();
+        $trails = $em->getRepository('AppBundle:Trail')->findAll();
+
+        return $this->render(':Default:index.html.twig', array('trails' => $trails));
     }
 }

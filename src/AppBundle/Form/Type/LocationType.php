@@ -16,7 +16,7 @@ class LocationType extends AbstractType
             ->add('box', 'text', array('required' => false))
             ->add('postal', 'text')
             ->add('city', 'text')
-            ->add('region', 'text')
+            ->add('region', 'text', array('required' => false))
             ->add('country', 'text');
     }
 
