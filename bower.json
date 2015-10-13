@@ -8,6 +8,7 @@
   "private": true,
   "dependencies": {
     "bootstrap-4": "https://github.com/twbs/bootstrap/archive/v4.0.0-alpha.zip",
+    "gpxviewer": "https://github.com/peplin/gpxviewer/archive/next.zip",
     "clastic_backoffice": "./vendor/clastic/backoffice-bundle/bower.json",
     "clastic_menu": "./vendor/clastic/menu-bundle/bower.json",
     "clastic_alias": "./vendor/clastic/alias-bundle/bower.json",
