@@ -12,6 +12,7 @@
                     <p class="card-text">{{ route.description | raw }}</p>
                 </div>
                 <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Type: {{ route.type.node.title }}</li>
                     <li class="list-group-item">Distance: {{ route.distance }}k</li>
                     {% if route.color or route.shape %}
                         <li class="list-group-item">Signalisation: {{ "#{route.color} #{route.shape}" }}</li>

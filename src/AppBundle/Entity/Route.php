@@ -26,6 +26,11 @@ class Route implements NodeReferenceInterface
     private $description;
 
     /**
+     * @var RouteType
+     */
+    private $type;
+
+    /**
      * @var float
      */
     private $distance;
@@ -90,6 +95,29 @@ class Route implements NodeReferenceInterface
     public function getDescription()
     {
         return $this->description;
+    }
+
+    /**
+     * Set type
+     *
+     * @param RouteType $type
+     * @return Route
+     */
+    public function setType($type)
+    {
+        $this->type = $type;
+
+        return $this;
+    }
+
+    /**
+     * Get type
+     *
+     * @return RouteType
+     */
+    public function getType()
+    {
+        return $this->type;
     }
 
     /**

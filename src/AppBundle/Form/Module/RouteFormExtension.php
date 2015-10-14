@@ -14,6 +14,12 @@ class RouteFormExtension extends AbstractNodeTypeExtension
     {
         $this->getTabHelper($builder)->findTab('general')
             ->add('description', 'wysiwyg', array('required' => true))
+            ->add('type', 'entity', array(
+                'class' => 'AppBundle:RouteTYpe',
+                'property_path' => 'type',
+                'label' => 'Type',
+                'required' => true,
+            ))
             ->add('distance', 'number', array('required' => true))
             ->add('color', 'entity', array(
                 'class' => 'AppBundle:Color',
