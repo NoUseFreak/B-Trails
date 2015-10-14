@@ -14,37 +14,37 @@ class Shape extends Taxonomy
     /**
      * @var ArrayCollection
      */
-    private $trails;
+    private $routes;
 
     /**
      * Color constructor.
      */
     public function __construct()
     {
-        $this->trails = new ArrayCollection();
+        $this->routes = new ArrayCollection();
     }
 
     /**
-     * Set trails
+     * Set routes
      *
-     * @param ArrayCollection $trails
+     * @param ArrayCollection $routes
      * @return Shape
      */
-    public function setTrails(ArrayCollection $trails)
+    public function setRoutes(ArrayCollection $routes)
     {
-        $this->trails = $trails;
+        $this->routes = $routes;
 
         return $this;
     }
 
     /**
-     * Get trails
+     * Get routes
      *
      * @return ArrayCollection
      */
-    public function getTrails()
+    public function getRoutes()
     {
-        return $this->trails;
+        return $this->routes;
     }
 
     /**

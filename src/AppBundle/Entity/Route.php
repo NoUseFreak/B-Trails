@@ -9,9 +9,9 @@ use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
- * Trail
+ * Route
  */
-class Trail implements NodeReferenceInterface
+class Route implements NodeReferenceInterface
 {
     use NodeReferenceTrait;
 
@@ -53,7 +53,7 @@ class Trail implements NodeReferenceInterface
     /**
      * NOTE: This is not a mapped field of entity metadata, just a simple property.
      *
-     * @Vich\UploadableField(mapping="trail_gpx", fileNameProperty="gpxFileName")
+     * @Vich\UploadableField(mapping="route_gpx", fileNameProperty="gpxFileName")
      *
      * @var File
      */
@@ -62,7 +62,7 @@ class Trail implements NodeReferenceInterface
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -96,7 +96,7 @@ class Trail implements NodeReferenceInterface
      * Set distance
      *
      * @param float $distance
-     * @return Trail
+     * @return Route
      */
     public function setDistance($distance)
     {
@@ -108,7 +108,7 @@ class Trail implements NodeReferenceInterface
     /**
      * Get distance
      *
-     * @return float 
+     * @return float
      */
     public function getDistance()
     {
@@ -119,7 +119,7 @@ class Trail implements NodeReferenceInterface
      * Set color
      *
      * @param string $color
-     * @return Trail
+     * @return Route
      */
     public function setColor($color)
     {
@@ -131,7 +131,7 @@ class Trail implements NodeReferenceInterface
     /**
      * Get color
      *
-     * @return string 
+     * @return string
      */
     public function getColor()
     {
@@ -142,7 +142,7 @@ class Trail implements NodeReferenceInterface
      * Set shape
      *
      * @param string $shape
-     * @return Trail
+     * @return Route
      */
     public function setShape($shape)
     {
@@ -154,7 +154,7 @@ class Trail implements NodeReferenceInterface
     /**
      * Get shape
      *
-     * @return string 
+     * @return string
      */
     public function getShape()
     {
@@ -165,7 +165,7 @@ class Trail implements NodeReferenceInterface
      * Set location
      *
      * @param Location $location
-     * @return Trail
+     * @return Route
      */
     public function setLocation(Location $location)
     {
@@ -188,7 +188,7 @@ class Trail implements NodeReferenceInterface
      * Set gpxfilename
      *
      * @param string $gpxFileName
-     * @return Trail
+     * @return Route
      */
     public function setGpxFileName($gpxFileName)
     {

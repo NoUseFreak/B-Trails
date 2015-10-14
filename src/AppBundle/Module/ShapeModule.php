@@ -27,7 +27,7 @@ class ShapeModule implements NodeModuleInterface, SubmoduleInterface
      */
     public function getIdentifier()
     {
-        return 'trail/shape';
+        return 'route/shape';
     }
 
     /**
@@ -37,7 +37,7 @@ class ShapeModule implements NodeModuleInterface, SubmoduleInterface
      */
     public function getParentIdentifier()
     {
-        return 'trail';
+        return 'route';
     }
 
     /**

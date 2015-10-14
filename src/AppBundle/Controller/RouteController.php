@@ -5,16 +5,16 @@ namespace AppBundle\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class TrailController extends Controller
+class RouteController extends Controller
 {
     /**
-     * @Route("/trail/{id}", name="trail_show")
+     * @Route("/route/{id}", name="route_show")
      */
     public function showAction($id)
     {
         $em = $this->getDoctrine()->getEntityManager();
-        $trail = $em->getRepository('AppBundle:Trail')->find($id);
+        $route = $em->getRepository('AppBundle:Route')->find($id);
 
-        return $this->render(':Trail:detail.html.twig', array('trail' => $trail));
+        return $this->render(':Route:detail.html.twig', array('route' => $route));
     }
 }

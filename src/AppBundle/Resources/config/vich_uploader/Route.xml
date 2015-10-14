@@ -1,0 +1,3 @@
+<vich_uploader class="AppBundle\Entity\Route">
+    <field mapping="route_gpx" name="gpx_file" filename_property="gpxFileName" />
+</vich_uploader>

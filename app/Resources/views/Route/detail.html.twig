@@ -8,20 +8,20 @@
         <div class="col-md-4">
             <div class="card">
                 <div class="card-block">
-                    <h4 class="card-title">{{ trail.node.title }}</h4>
-                    <p class="card-text">{{ trail.description | raw }}</p>
+                    <h4 class="card-title">{{ route.node.title }}</h4>
+                    <p class="card-text">{{ route.description | raw }}</p>
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Distance: {{ trail.distance }}k</li>
-                    {% if trail.color or trail.shape %}
-                        <li class="list-group-item">Signalisation: {{ "#{trail.color} #{trail.shape}" }}</li>
+                    <li class="list-group-item">Distance: {{ route.distance }}k</li>
+                    {% if route.color or route.shape %}
+                        <li class="list-group-item">Signalisation: {{ "#{route.color} #{route.shape}" }}</li>
                     {% endif %}
                 </ul>
                 <div class="card-block">
                     <address>
                         <strong>Starting Point</strong><br>
-                        {{ "#{trail.location.street} #{trail.location.nbr}" }}<br>
-                        {{ "#{trail.location.postal} #{trail.location.city}, #{trail.location.country}" }}
+                        {{ "#{route.location.street} #{route.location.nbr}" }}<br>
+                        {{ "#{route.location.postal} #{route.location.city}, #{route.location.country}" }}
                     </address>
                 </div>
                 <div class="card-block">

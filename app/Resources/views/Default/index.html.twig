@@ -3,14 +3,14 @@
 {% block content %}
     <div class="row">
         <div class="col-md-9">
-        {% for trail in trails %}
+        {% for route in routes %}
             <div class="col-md-4">
                 <div class="card">
                     <img class="card-img-top img-responsive" src="http://lorempixel.com/257/100/sports/1" alt="Card image cap">
                     <div class="card-block">
-                        <h4 class="card-title">{{ trail.node.title }} ({{ trail.distance }}k)</h4>
-                        <p class="card-text">{{ trail.description | raw }}</p>
-                        <a href="{{ path('trail_show', {'id': trail.node.id}) }}" class="btn btn-primary">View details</a>
+                        <h4 class="card-title">{{ route.node.title }} ({{ route.distance }}k)</h4>
+                        <p class="card-text">{{ route.description | raw }}</p>
+                        <a href="{{ path('route_show', {'id': route.node.id}) }}" class="btn btn-primary">View details</a>
                     </div>
                 </div>
             </div>
@@ -22,7 +22,7 @@
                     Statistics
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Total trails: 5</li>
+                    <li class="list-group-item">Total routes: 5</li>
                     <li class="list-group-item">Total distance: 100k</li>
                 </ul>
             </div>

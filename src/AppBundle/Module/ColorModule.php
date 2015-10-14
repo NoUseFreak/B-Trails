@@ -27,7 +27,7 @@ class ColorModule implements NodeModuleInterface, SubmoduleInterface
      */
     public function getIdentifier()
     {
-        return 'trail/color';
+        return 'route/color';
     }
 
     /**
@@ -37,7 +37,7 @@ class ColorModule implements NodeModuleInterface, SubmoduleInterface
      */
     public function getParentIdentifier()
     {
-        return 'trail';
+        return 'route';
     }
 
     /**

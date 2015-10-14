@@ -77,7 +77,7 @@ swiftmailer:
 vich_uploader:
     db_driver: orm # or mongodb or propel or phpcr
     mappings:
-        trail_gpx:
+        route_gpx:
             uri_prefix:         /uploads/gpx
             upload_destination: %kernel.root_dir%/../web/uploads/gpx
             inject_on_load:     true

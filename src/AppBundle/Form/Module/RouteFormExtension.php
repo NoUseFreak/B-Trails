@@ -6,9 +6,9 @@ use Clastic\NodeBundle\Form\Extension\AbstractNodeTypeExtension;
 use Symfony\Component\Form\FormBuilderInterface;
 
 /**
- * TrailTypeExtension
+ * RouteTypeExtension
  */
-class TrailFormExtension extends AbstractNodeTypeExtension
+class RouteFormExtension extends AbstractNodeTypeExtension
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
@@ -29,7 +29,7 @@ class TrailFormExtension extends AbstractNodeTypeExtension
             ))
             ->add('gpxFile', 'file');
 
-        $this->getTabHelper($builder)->createTab('trail_location', 'Location', array(
+        $this->getTabHelper($builder)->createTab('route_location', 'Location', array(
             'position' => array('after' => 'general')
         ))
             ->add('location', 'location');

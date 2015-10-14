@@ -1,3 +1,0 @@
-<vich_uploader class="AppBundle\Entity\Trail">
-    <field mapping="trail_gpx" name="gpx_file" filename_property="gpxFileName" />
-</vich_uploader>

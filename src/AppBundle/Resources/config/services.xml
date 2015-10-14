@@ -1,6 +1,5 @@
 <?xml version="1.0"?>
-<container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+<container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <!--
     <services>
@@ -12,20 +11,15 @@
     </services>
     -->
     <parameters>
-        <parameter key="app_bundle.trail.module.class">AppBundle\Module\TrailModule</parameter>
-        <parameter key="app_bundle.trail.module.form_extension.class">AppBundle\Form\Module\TrailFormExtension</parameter>
         <parameter key="app_bundle.color.module.class">AppBundle\Module\ColorModule</parameter>
         <parameter key="app_bundle.color.module.form_extension.class">AppBundle\Form\Module\ColorFormExtension</parameter>
         <parameter key="app_bundle.shape.module.class">AppBundle\Module\ShapeModule</parameter>
         <parameter key="app_bundle.shape.module.form_extension.class">AppBundle\Form\Module\ShapeFormExtension</parameter>
         <parameter key="app_bundle.form.type.location.class">AppBundle\Form\Type\LocationType</parameter>
+        <parameter key="app_bundle.route.module.class">AppBundle\Module\RouteModule</parameter>
+        <parameter key="app_bundle.route.module.form_extension.class">AppBundle\Form\Module\RouteFormExtension</parameter>
     </parameters>
     <services>
-        <service id="app_bundle.trail.module" class="%app_bundle.trail.module.class%">
-            <tag name="clastic.module" node_module="true" alias="trail"/>
-            <tag name="clastic.node_form" build_service="app_bundle.trail.module.form_extension"/>
-        </service>
-        <service id="app_bundle.trail.module.form_extension" class="%app_bundle.trail.module.form_extension.class%"/>
         <service id="app_bundle.color.module" class="%app_bundle.color.module.class%">
             <tag name="clastic.module" node_module="true" alias="color"/>
             <tag name="clastic.node_form" build_service="app_bundle.color.module.form_extension"/>
@@ -39,5 +33,10 @@
         <service id="app_bundle.form.type.location" class="%app_bundle.form.type.location.class%">
             <tag name="form.type" alias="location"/>
         </service>
+        <service id="app_bundle.route.module" class="%app_bundle.route.module.class%">
+            <tag name="clastic.module" node_module="true" alias="route"/>
+            <tag name="clastic.node_form" build_service="app_bundle.route.module.form_extension"/>
+        </service>
+        <service id="app_bundle.route.module.form_extension" class="%app_bundle.route.module.form_extension.class%"/>
     </services>
 </container>

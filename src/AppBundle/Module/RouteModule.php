@@ -5,9 +5,9 @@ namespace AppBundle\Module;
 use Clastic\NodeBundle\Module\NodeModuleInterface;
 
 /**
- * Trail
+ * Route
  */
-class TrailModule implements NodeModuleInterface
+class RouteModule implements NodeModuleInterface
 {
     /**
      * The name of the module.
@@ -16,7 +16,7 @@ class TrailModule implements NodeModuleInterface
      */
     public function getName()
     {
-        return 'Trail';
+        return 'Route';
     }
 
     /**
@@ -26,7 +26,7 @@ class TrailModule implements NodeModuleInterface
      */
     public function getIdentifier()
     {
-        return 'trail';
+        return 'route';
     }
 
     /**
@@ -34,7 +34,7 @@ class TrailModule implements NodeModuleInterface
      */
     public function getEntityName()
     {
-        return 'AppBundle:Trail';
+        return 'AppBundle:Route';
     }
 
     /**
@@ -42,6 +42,6 @@ class TrailModule implements NodeModuleInterface
      */
     public function getDetailTemplate()
     {
-        return 'AppBundle:Trail:detail.html.twig';
+        return 'AppBundle:Route:detail.html.twig';
     }
 }
