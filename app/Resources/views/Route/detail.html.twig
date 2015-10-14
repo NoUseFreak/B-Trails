@@ -3,7 +3,7 @@
 {% block content %}
     <div class="row">
         <div class="col-md-8">
-            <div style="width: 100%; height: 400px;" data-gpx-location="/bundles/app/gpx/voeren-bronnenwandeling-9k.gpx"></div>
+            <div style="width: 100%; height: 400px;" data-gpx-location="{{ asset('uploads/gpx/' ~ route.gpxFileName) }}"></div>
         </div>
         <div class="col-md-4">
             <div class="card">
