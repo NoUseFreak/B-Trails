@@ -2,17 +2,29 @@
 
 {% block content %}
     <div class="row">
-        <div class="col-md-8">
-            
+        <div class="col-md-9">
+        {% for trail in trails %}
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top img-responsive" src="http://lorempixel.com/257/100/sports/1" alt="Card image cap">
+                    <div class="card-block">
+                        <h4 class="card-title">{{ trail.node.title }} ({{ trail.distance }}k)</h4>
+                        <p class="card-text">{{ trail.description | raw }}</p>
+                        <a href="{{ path('trail_show', {'id': trail.node.id}) }}" class="btn btn-primary">View details</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
         </div>
-        <div class="col-md-4">
-            <div class="list-group">
-                <a href="#" class="list-group-item active">
-                    Newest trails
-                </a>
-                {% for trail in trails %}
-                    <a href="{{ path('trail_show', {'id': trail.node.id}) }}" class="list-group-item">{{ trail.node.title }} ({{ trail.distance }}k)</a>
-                {% endfor %}
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-header">
+                    Statistics
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Total trails: 5</li>
+                    <li class="list-group-item">Total distance: 100k</li>
+                </ul>
             </div>
         </div>
     </div>
