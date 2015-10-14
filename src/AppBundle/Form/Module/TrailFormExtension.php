@@ -26,7 +26,8 @@ class TrailFormExtension extends AbstractNodeTypeExtension
                 'property_path' => 'shape',
                 'label' => 'Shape',
                 'required' => false,
-            ));
+            ))
+            ->add('gpxFile', 'file');
 
         $this->getTabHelper($builder)->createTab('trail_location', 'Location', array(
             'position' => array('after' => 'general')

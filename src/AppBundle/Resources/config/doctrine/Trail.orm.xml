@@ -6,6 +6,7 @@
     </id>
     <field name="description" type="text" column="description" nullable="true"/>
     <field name="distance" type="float" column="distance"/>
+    <field name="gpxFileName" type="text" column="gpx_file_name" nullable="true"/>
 
     <many-to-one field="node" target-entity="Clastic\NodeBundle\Entity\Node">
       <cascade><cascade-all/></cascade>
