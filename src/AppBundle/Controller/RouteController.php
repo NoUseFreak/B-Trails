@@ -12,7 +12,7 @@ class RouteController extends Controller
      */
     public function showAction($id)
     {
-        $em = $this->getDoctrine()->getEntityManager();
+        $em = $this->getDoctrine()->getManager();
         $route = $em->getRepository('AppBundle:Route')->find($id);
 
         return $this->render(':Route:detail.html.twig', array('route' => $route));
