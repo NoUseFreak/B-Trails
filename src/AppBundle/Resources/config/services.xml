@@ -20,6 +20,7 @@
         <parameter key="app_bundle.route.module.form_extension.class">AppBundle\Form\Module\RouteFormExtension</parameter>
         <parameter key="app_bundle.route_type.module.class">AppBundle\Module\RouteTypeModule</parameter>
         <parameter key="app_bundle.route_type.module.form_extension.class">AppBundle\Form\Module\RouteTypeFormExtension</parameter>
+        <parameter key="app_bundle.gpx_file_renamer.class">AppBundle\Renamer\GpxFileRenamer</parameter>
     </parameters>
     <services>
         <service id="app_bundle.color.module" class="%app_bundle.color.module.class%">
@@ -45,5 +46,6 @@
             <tag name="clastic.node_form" build_service="app_bundle.route_type.module.form_extension"/>
         </service>
         <service id="app_bundle.route_type.module.form_extension" class="%app_bundle.route_type.module.form_extension.class%"/>
+        <service id="app_bundle.gpx_file_renamer" class="%app_bundle.gpx_file_renamer.class%"/>
     </services>
 </container>

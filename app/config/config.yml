@@ -85,6 +85,7 @@ vich_uploader:
         route_gpx:
             uri_prefix:         /uploads/gpx
             upload_destination: %kernel.root_dir%/../web/uploads/gpx
+            namer:              app_bundle.gpx_file_renamer
             inject_on_load:     true
             delete_on_update:   true
             delete_on_remove:   true
