@@ -12,4 +12,23 @@ use Doctrine\ORM\EntityRepository;
  */
 class RouteRepository extends EntityRepository
 {
+    public function getCount()
+    {
+        $qb = $this->createQueryBuilder('r');
+
+        return $qb
+          ->select($qb->expr()->count('r'))
+          ->getQuery()
+          ->getSingleScalarResult();
+    }
+
+    public function getDistanceTotal()
+    {
+        $dql = sprintf('SELECT SUM(r.distance) FROM %s r', $this->getClassName());
+
+        return $this->createQueryBuilder('r')
+          ->getQuery()
+          ->setDQL($dql)
+          ->getSingleScalarResult();
+    }
 }
