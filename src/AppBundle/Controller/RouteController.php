@@ -15,6 +15,10 @@ class RouteController extends Controller
         $em = $this->getDoctrine()->getManager();
         $route = $em->getRepository('AppBundle:Route')->find($id);
 
+        if (!$route) {
+            throw $this->createNotFoundException('The route does not exist');
+        }
+
         return $this->render(':Route:detail.html.twig', array('route' => $route));
     }
 }
