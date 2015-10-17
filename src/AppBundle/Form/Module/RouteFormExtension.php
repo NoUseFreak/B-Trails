@@ -33,7 +33,9 @@ class RouteFormExtension extends AbstractNodeTypeExtension
                 'label' => 'Shape',
                 'required' => false,
             ))
-            ->add('gpxFile', 'file');
+            ->add('gpx_file', 'vich_file', array(
+                'required' => true,
+            ));
 
         $this->getTabHelper($builder)->createTab('route_location', 'Location', array(
             'position' => array('after' => 'general')

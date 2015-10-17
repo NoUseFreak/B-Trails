@@ -34,6 +34,8 @@ twig:
     strict_variables: "%kernel.debug%"
     globals:
         clastic_site_name: %clastic_site_name%
+    form_themes:
+        - 'VichUploaderBundle:Form:fields.html.twig'
 
 # Assetic Configuration
 assetic:
