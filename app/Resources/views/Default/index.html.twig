@@ -10,7 +10,7 @@
                     <div class="card-block">
                         <h4 class="card-title">{{ route.node.title }} ({{ route.distance }}k)</h4>
                         <p class="card-text">{{ route.description | raw }}</p>
-                        <a href="{{ path('route_show', {'id': route.node.id}) }}" class="btn btn-primary">View details</a>
+                        <a href="{{ path('clastic_front_detail', {'id': route.node.id}) }}" class="btn btn-primary">View details</a>
                     </div>
                 </div>
             </div>
